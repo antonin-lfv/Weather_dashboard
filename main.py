@@ -8,12 +8,12 @@ st.set_page_config(layout="wide", page_title="My app", menu_items={
 })
 
 st.title("Overview")
-st.write("##")
+st.write(ConstString.SPACE)
 
 line1_col1, line1_col2, line1_col3, line1_col4 = st.columns((1, 1, 1, 1))
-st.write("##")
-st.markdown("---")
-st.write("##")
+st.write(ConstString.SPACE)
+st.markdown(ConstString.SEPARATOR)
+st.write(ConstString.SPACE)
 line2_col1, line2_col2, line2_col3, line2_col4 = st.columns((1, 1, 1, 1))
 
 with line1_col1:
