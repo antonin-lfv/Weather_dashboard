@@ -16,7 +16,6 @@ showWarningOnDirectExecution = true
 # Default: "arrow"
 dataFrameSerialization = "arrow"
 
-
 [logger]
 
 # Level of logging: 'error', 'warning', 'info', or 'debug'.
