@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "mold_level": 1,
+            "aqi": 47,
+            "pm10": 43,
+            "co": 260.353,
+            "o3": 92.9832,
+            "predominant_pollen_type": "Molds",
+            "so2": 1.93715,
+            "pollen_level_tree": 1,
+            "pollen_level_weed": 1,
+            "no2": 8.99658,
+            "pm25": 11.4,
+            "pollen_level_grass": 1
+        }
+    ],
+    "city_name": "Reims",
+    "lon": 4.03,
+    "timezone": "Europe/Paris",
+    "lat": 49.26,
+    "country_code": "FR",
+    "state_code": "44",
+    "date": "2022-04-26"
+}

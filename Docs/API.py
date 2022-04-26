@@ -1,3 +1,5 @@
+"""Test API"""
+
 # Historical Air quality
 
 import requests
@@ -5,7 +7,7 @@ import streamlit as st
 
 url = "https://air-quality.p.rapidapi.com/history/airquality"
 
-querystring = {"lon": "-78.638", "lat": "35.779"}
+querystring = {"lon": "4.031696", "lat": "49.258329"}
 
 headers = {
     "X-RapidAPI-Host": "air-quality.p.rapidapi.com",

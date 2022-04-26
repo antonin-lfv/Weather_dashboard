@@ -7,7 +7,7 @@
 
 [Docs](https://rapidapi.com/weatherbit/api/air-quality/)
 
-Reims : {"lon": "4.031696", "lat": "49.258329"}
+35 calls / day
 
 ### A. Current Air quality
 
@@ -18,7 +18,7 @@ import requests
 
 url = "https://air-quality.p.rapidapi.com/current/airquality"
 
-querystring = {"lon":"-73.00597","lat":"40.71427"}
+querystring = {"lon": "4.031696", "lat": "49.258329"}
 
 headers = {
 	"X-RapidAPI-Host": "air-quality.p.rapidapi.com",
@@ -40,7 +40,7 @@ import requests
 
 url = "https://air-quality.p.rapidapi.com/history/airquality"
 
-querystring = {"lon":"-78.638","lat":"35.779"}
+querystring = {"lon": "4.031696", "lat": "49.258329"}
 
 headers = {
 	"X-RapidAPI-Host": "air-quality.p.rapidapi.com",
@@ -63,7 +63,7 @@ import requests
 
 url = "https://air-quality.p.rapidapi.com/forecast/airquality"
 
-querystring = {"lat":"35.779","lon":"-78.638","hours":"72"}
+querystring = {"lon": "4.031696", "lat": "49.258329","hours":"72"}
 
 headers = {
 	"X-RapidAPI-Host": "air-quality.p.rapidapi.com",
