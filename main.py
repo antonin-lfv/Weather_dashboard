@@ -67,7 +67,7 @@ with line1_col1:
         )
         st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=int(get_current_airQuality_json()['data'][0]['aqi']),
+                  value=int(get_history_airQuality_json()["data"][0]["aqi"]),
                   delta=get_history_airQuality_json()["data"][0]["aqi"]-get_history_airQuality_json()["data"][71]["aqi"],
                   delta_color="inverse")
 
@@ -90,7 +90,7 @@ with line1_col2:
         )
         st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=f"{round(get_current_airQuality_json()['data'][0]['pm25'], 2)} µg/m³",
+                  value=f"{round(get_history_airQuality_json()['data'][0]['pm25'], 2)} µg/m³",
                   delta=round(get_history_airQuality_json()["data"][0]["pm25"]-get_history_airQuality_json()["data"][71]["pm25"], 3),
                   delta_color="inverse")
 
@@ -113,7 +113,7 @@ with line1_col3:
         )
         st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=f"{round(get_current_airQuality_json()['data'][0]['co'], 2)} µg/m³",
+                  value=f"{round(get_history_airQuality_json()['data'][0]['co'], 2)} µg/m³",
                   delta=round(get_history_airQuality_json()["data"][0]["co"] - get_history_airQuality_json()["data"][71][
                       "co"], 3),
                   delta_color="inverse")
