@@ -2,16 +2,16 @@
     "data": [
         {
             "mold_level": 1,
-            "aqi": 47,
-            "pm10": 43,
-            "co": 260.353,
-            "o3": 92.9832,
+            "aqi": 55,
+            "pm10": 33.7,
+            "co": 247.002,
+            "o3": 97.2748,
             "predominant_pollen_type": "Molds",
-            "so2": 1.93715,
+            "so2": 1.2815,
             "pollen_level_tree": 1,
             "pollen_level_weed": 1,
-            "no2": 8.99658,
-            "pm25": 11.4,
+            "no2": 5.3551,
+            "pm25": 14.2,
             "pollen_level_grass": 1
         }
     ],
@@ -21,5 +21,5 @@
     "lat": 49.26,
     "country_code": "FR",
     "state_code": "44",
-    "date": "2022-04-26"
+    "date": "2022-04-27"
 }

@@ -34,21 +34,21 @@ def get_xhours_airQuality_forecast(x="72", lon=ConstCoord.REIMS_LON, lat=ConstCo
     return response.json()
 
 
-def get_current_json():
+def get_current_airQuality_json():
     """From Json"""
     with open(ConstPath.AIR_QUALITY_CURRENT, 'r+') as current:
         data = json.load(current)
         return data
 
 
-def get_forecast_json():
+def get_forecast_airQuality_json():
     """From Json"""
     with open(ConstPath.AIR_QUALITY_FORECAST, 'r+') as forecast:
         data = json.load(forecast)
         return data
 
 
-def get_history_json():
+def get_history_airQuality_json():
     """From Json"""
     with open(ConstPath.AIR_QUALITY_HISTORY, 'r+') as history:
         data = json.load(history)

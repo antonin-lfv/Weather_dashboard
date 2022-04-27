@@ -18,6 +18,7 @@ class ConstPlotly:
     PAPER_BGCOLOR = 'rgba(0,0,0,0)'
     PLOT_BGCOLOR = 'rgba(0,0,0,0)'
     LAYOUT_MARGIN = dict(l=10, r=10, b=10, t=10)
+    HEIGHT = 425
 
 
 class ConstFrontText:
