@@ -28,7 +28,6 @@ elif page == "Overview":
         st.title("Overview")
     st.write(ConstString.SPACE)
 
-
     # ===== Box current weather ===== #
     with st.expander(label=ConstFrontText.WEATHER, expanded=True):
         st.write("""
@@ -46,7 +45,6 @@ elif page == "Overview":
         # TODO : subplots 2 lines 4 cols with plotly image of sun, cloud, rain etc
         st.plotly_chart(fig, use_container_width=True)
 
-
     # ===== layout ===== #
     line1_col1, line1_col2, line1_col3 = st.columns([1] * 3)
     st.write(ConstString.SPACE)
@@ -54,14 +52,11 @@ elif page == "Overview":
     st.write(ConstString.SPACE)
     line2_col1, line2_col2, line2_col3 = st.columns([1] * 3)
 
-
     # ===== Boxes ===== #
     with line1_col1:
         with st.expander(label=ConstFrontText.AIRQUALITY, expanded=True):
-            st.write("""
-                The chart above shows some numbers I picked for you.
-                I rolled actual dice for these, so they're *guaranteed* to
-                be random.
+            st.subheader("""
+                Tree pollen level of """ + get_current_airQuality()['city_name'] + """
             """)
             fig = go.Figure()
             fig.add_scatter(x=np.linspace(-10, 10, 1000), y=np.sin(np.linspace(-10, 10, 1000)))
@@ -71,8 +66,7 @@ elif page == "Overview":
                 margin=ConstPlotly.LAYOUT_MARGIN
             )
             st.plotly_chart(fig, use_container_width=True)
-            st.metric(label="Accurancy", value=-10, delta=10, delta_color="inverse")
-
+            st.metric(label="Air quality index", value=int(get_current_airQuality()['data'][0]['aqi']), delta="Low", delta_color="normal")
     with line2_col1:
         with st.expander(label="See explanation", expanded=True):
             st.write("""
