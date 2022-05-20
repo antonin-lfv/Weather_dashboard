@@ -149,3 +149,19 @@ pm10: Concentration of particulate matter < 10 microns (µg/m³)
 ```
 
 <br>
+
+
+## II. Weather
+
+[Docs](https://www.meteomatics.com/en/api/getting-started)
+
+500 calls / day
+
+15 paramètres de base (voir aussi : «Parameter List Basic API Package ») : 
+- température (horaire, min et max), 
+- vent (vitesse, rafales et direction), 
+- pression atmosphérique (moyenne au niveau de la mer), 
+- précipitations (horaires et journalières), 
+- symboles météo (horaires et quotidiens), 
+- indice UV, 
+- heure de lever et coucher du soleil.

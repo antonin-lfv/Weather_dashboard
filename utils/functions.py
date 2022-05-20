@@ -1,8 +1,4 @@
-from utils.classes import *
 from utils.const import *
-import requests
-import streamlit as st
-import json
 
 
 # ===== Air quality
@@ -59,6 +55,7 @@ def set_current_airQuality(lon=ConstCoord.REIMS_LON, lat=ConstCoord.REIMS_LAT):
     with open(ConstPath.AIR_QUALITY_CURRENT, 'r+') as current:
         data = json.load(current)
         if data["date"] != ConstTime.TODAY_STRING:
+            print(data["date"], ConstTime.TODAY_STRING)
             # Update json
             data = get_current_airQuality(lon=lon, lat=lat)
             if 'message' in data.keys():
@@ -93,3 +90,11 @@ def set_xhours_airQuality_forecast(x="72", lon=ConstCoord.REIMS_LON, lat=ConstCo
             # apply update on json
             json.dump(data, open(ConstPath.AIR_QUALITY_FORECAST, "w"), indent=4)
             return ConstApi.RESPONSE_SUCCES
+
+
+# ===== Weather
+
+def get_current_temperature(lon=ConstCoord.REIMS_LON, lat=ConstCoord.REIMS_LAT):
+    """From API"""
+    url = f"https://api.meteomatics.com/2022-05-20T20:00:00Z/t_0m:C/{lat},{lon}/json"
+    print(url)
