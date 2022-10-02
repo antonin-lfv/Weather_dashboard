@@ -1,3 +1,4 @@
 plotly
 streamlit
 requests
+pip==22.2.2
