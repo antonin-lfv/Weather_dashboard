@@ -34,7 +34,7 @@ with st.expander(label=ConstFrontText.WEATHER, expanded=True):
         height=ConstPlotly.HEIGHT
     )
     # TODO : subplots 2 lines 4 cols with plotly image of sun, cloud, rain etc
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
 
 # ===== layout ===== #
 line1_col1, line1_col2, line1_col3 = st.columns([1] * 3)
@@ -61,9 +61,9 @@ with line1_col1:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=int(get_current_airQuality_json()['data'][0]['aqi']),
+                  value=int(get_history_airQuality_json()["data"][0]["aqi"]),
                   delta=get_history_airQuality_json()["data"][0]["aqi"]-get_history_airQuality_json()["data"][71]["aqi"],
                   delta_color="inverse")
 
@@ -84,9 +84,9 @@ with line1_col2:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=f"{round(get_current_airQuality_json()['data'][0]['pm25'], 2)} µg/m³",
+                  value=f"{round(get_history_airQuality_json()['data'][0]['pm25'], 2)} µg/m³",
                   delta=round(get_history_airQuality_json()["data"][0]["pm25"]-get_history_airQuality_json()["data"][71]["pm25"], 3),
                   delta_color="inverse")
 
@@ -107,9 +107,9 @@ with line1_col3:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="3 day variation",
-                  value=f"{round(get_current_airQuality_json()['data'][0]['co'], 2)} µg/m³",
+                  value=f"{round(get_history_airQuality_json()['data'][0]['co'], 2)} µg/m³",
                   delta=round(get_history_airQuality_json()["data"][0]["co"] - get_history_airQuality_json()["data"][71][
                       "co"], 3),
                   delta_color="inverse")
@@ -128,7 +128,7 @@ with line2_col1:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="Accurancy", value=0, delta=-9, delta_color="inverse")
 
 with line2_col2:
@@ -145,7 +145,7 @@ with line2_col2:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="Accurancy", value=98, delta=-9, delta_color="inverse")
 
 with line2_col3:
@@ -162,5 +162,5 @@ with line2_col3:
             margin=ConstPlotly.LAYOUT_MARGIN,
             height=ConstPlotly.HEIGHT
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config=ConstPlotly.CONFIG)
         st.metric(label="Accurancy", value=98, delta=-9, delta_color="inverse")
